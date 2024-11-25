@@ -1,0 +1,118 @@
+@charset "EUC-KR";
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fffbea;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #ffe26e;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.main {
+    padding: 20px 0;
+}
+
+.announcement {
+    display: flex;
+    align-items: center;
+    background-color: #fffae6;
+    padding: 10px;
+    border: 1px solid #ffe26e;
+    margin-bottom: 5px;
+}
+
+.announcement-item {
+    background-color: #ffe26e;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.post-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.post-item span {
+    width: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.pagination button.active {
+    font-weight: bold;
+    background-color: #ffeeb9;
+    border-color: #ffeeb9;
+}
+
+.pagination button:hover {
+    background-color: #ffeeb9;
+    border-color: #ffeeb9;
+}

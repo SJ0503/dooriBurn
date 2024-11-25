@@ -1,0 +1,138 @@
+/* global style */
+* {
+	font-family: "IBM Plex Sans KR", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f8f1db;
+	margin: 0;
+	padding: 0;
+	transition: margin-right 0.5s;
+}
+
+/* header & banner */
+header {
+	background-color: #f8f1db;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.banner {
+	background-color: #f8f1db;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.banner:active {
+	background-color: #f8f1db;
+	transform: scale(0.98);
+	color: #f8f1db;
+}
+
+.menu-icon {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+/* sidebar (sidenav)  */
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	background-color: #ffeeb6;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	left: 25px;
+	font-size: 36px;
+	margin-right: 50px;
+}
+
+.sidenav .menu-section {
+	margin: 20px 0;
+}
+
+.sidenav .menu-section h2, .sidenav .menu-section h1 {
+	margin-left: 32px;
+	font-size: 20px;
+	color: #333;
+}
+
+.sidenav .menu-items, .sidenav .menu-itemss {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 0 32px;
+}
+
+.sidenav .menu-items a, .sidenav .menu-itemss a {
+	flex: 1 1 calc(33.333% - 20px);
+	text-align: left;
+	color: #333;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidenav .menu-itemss a:hover, .sidenav .menu-items a:hover {
+	color: #ffeba8;
+}
+
+/* main content & favorite list */
+.main-content {
+	transition: margin-right 0.5s;
+	padding: 10px;
+}
+
+.custom-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.custom-link h2, .custom-link h3 {
+	margin: 0;
+	color: #333;
+}
+
+/* 반응형 웹 (미디어 쿼리) */
+@media ( max-width : 768px) {
+	.sidenav {
+		width: 100%;
+	}
+	.menu-icon {
+		font-size: 25px;
+	}
+	.sidenav .menu-items a, .sidenav .menu-itemss a {
+		flex: 1 1 100%;
+		text-align: center;
+	}
+	.banner {
+		font-size: 24px;
+	}
+	.main-content {
+		padding: 5px;
+	}
+	.custom-link h2, .custom-link h3 {
+		font-size: 14px;
+	}
+}

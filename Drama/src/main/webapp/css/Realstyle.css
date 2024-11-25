@@ -1,0 +1,379 @@
+* {
+	font-family: "IBM Plex Sans KR", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Global styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f1db;
+	margin: 0;
+	padding: 0;
+	transition: margin-right 0.5s;
+}
+
+header {
+	background-color: #f8f1db;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.menu-icon {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	background-color: #ffeeb6;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px !important;
+	font-size: 36px;
+	margin-right: 0px;
+}
+
+.sidenav .menu-section {
+	margin: 20px 0;
+}
+
+.sidenav .menu-section h2, .sidenav .menu-section h1 {
+	margin-left: 32px;
+	font-size: 20px;
+	color: #333;
+}
+
+.sidenav .menu-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 0 32px;
+}
+
+.sidenav .menu-items a {
+	flex: 1 1 calc(33.333% - 20px);
+	text-align: left;
+	color: #333;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	transition: 0.3s;
+}
+
+/* 추가: 마이 페이지 하위 목록 세로 정렬을 위해 */
+.sidenav .menu-itemss a {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0 32px;
+	flex: 1 1 calc(33.333% - 20px);
+	text-align: left;
+	color: #333;
+	text-decoration: none;
+	font-size: 15px;
+	transition: 0.3s;
+	line-height: 2;
+}
+
+/* 추가: 마이 페이지 하위 목록 세로 정렬을 위해 */
+.sidenav .menu-itemss a:hover {
+	color: #333;
+	font-weight: bold !important;
+} 
+.main-content {
+	transition: margin-right 0.5s;
+	padding: 10px; /* 16px */
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border-radius: 30px;
+	padding: 10px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 20px auto;
+	width: 70%;
+	font-size: 18px;
+	/* height: 100px; */
+}
+
+.search-container input {
+	border: none;
+	outline: none;
+	padding: 4px; /* 10px */
+	border-radius: 20px;
+	flex-grow: 1;
+	font-size: 18px;
+	width: 50%;
+	margin-top: 8px;
+}
+
+
+.search-container button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 0px
+}
+
+.search-container img {
+	margin-top: 0px;
+	/* margin-top: 8px; */
+	margin-left: auto; /* 자동으로 남은 공간만큼 왼쪽 마진을 추가하여 이미지를 오른쪽으로 이동 */
+    display: block;
+}
+
+.ranking {
+	margin: 0px auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	width: 350px;
+}
+
+.rank-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	width: 100%;
+	max-width: 700px;
+}
+
+.rank-num {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #ffe591;
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	border-radius: 10px;
+	text-align: center;
+	margin-right: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rank-text {
+	flex-grow: 1;
+	padding: 10px 20px;
+	border-radius: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	background-color: #fff;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	height: 280px;
+}
+
+.intro h2 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #333;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 5px;
+	text-align: left;
+	z-index: 1;
+}
+
+.intro h2.highlight {
+	margin-top: 5px;
+}
+
+.intro h2.highlight::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40%;
+	background: gold;
+	z-index: -1;
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	gap: 20px;
+}
+
+.image-container a {
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 20vw;
+	height: 20vw;
+	max-width: 200px;
+	max-height: 200px;
+	transition: transform 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border: 5px solid #ffeba8;
+}
+
+.image-container a:hover {
+	transform: scale(1.1);
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+footer .btn {
+	background-color: #ffe591;
+	border: none;
+	border-radius: 20px;
+	padding: 10px 20px;
+	margin: 0 5px;
+	font-size: 11px;
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+	width: 100%;
+	height: auto; text-align : center;
+	padding: 10px 0;
+	font-size: 32px;
+	font-weight: bold;
+	color: #333;
+	text-align: center;
+}
+
+/* 선재 업고 튀어에 나온 그 장소! 나도 가 볼까? 아래 사진 3장 연결 */
+.image-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	gap: 20px;
+}
+
+.image-container a {
+	/*   display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150%;
+    height: 150%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ffeba8; 노란색 테두리 추가 */
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 20vw; /* 뷰포트 너비의 20% */
+	height: 20vw; /* 뷰포트 너비의 20% */
+	max-width: 200px; /* 최대 너비 설정 */
+	max-height: 200px; /* 최대 높이 설정 */
+	transition: transform 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border: 5px solid #ffeba8; /* 노란색 테두리 추가 */
+}
+
+.image-container a:hover {
+	transform: scale(1.1);
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+
+
+@media ( max-width : 768px) {
+	.search-container {
+		width: 56%; /* 90%; */
+		height: 43%; /* 추가 */
+		flex-direction: row; /* column; */
+		padding: 10px;
+	}
+	.search-container input {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.image-container {
+		flex-direction: row;
+		gap: 10px;
+	}
+	.ranking {
+		width: 350px;
+		padding: 10px;
+	}
+	.rank-item {
+		flex-direction: row; /* column; */
+		align-items: flex-start;
+	}
+	.rank-num {
+		margin-right: 10px;
+		margin-bottom: 5px;
+	}
+	/* footer {
+		flex-direction: column;
+		gap: 10px;
+	} */
+	.sidenav {
+		width: 100%;
+	}
+	/* .image-container a {
+		width: 80vw; 80vw;
+		height: 80vw; 80vw;
+		max-width: none;
+		max-height: none;
+	} */
+	.menu-icon {
+		font-size: 25px;
+	}
+}
+
+
+/* .search-container img{
+	margin-top: 8px !important; 
+}*/
+	
+	
+	
+
